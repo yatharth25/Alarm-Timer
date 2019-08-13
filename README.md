@@ -1,13 +1,22 @@
 # Alarm-Timer
 Real time Clock in IST and alarm timer project 
+
 import tkinter
+
 import winsound
+
 import time
+
 import math
+
 from time import strftime
+
 from tkinter import font as tkfont
+
 from tkinter import Frame
+
 from tkinter import Label
+
 
 def countdown(count): 
     
