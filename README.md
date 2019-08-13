@@ -26,6 +26,7 @@ def countdown(count):
  
     
 def updateButton():
+
     hour,minute,sec=hoursE.get(),minuteE.get(),secondE.get()
     if hour.isdigit() and minute.isdigit() and sec.isdigit():
         time=int(hour)*3600+int(minute)*60+int(sec)
@@ -40,7 +41,8 @@ label = Label(top, text= "Welcome!", font=("Times", 50), bg = "black", fg = "whi
 label.pack(side= "top", fill = "both", expand = 1)
 top.title_font = tkfont.Font(family = "Times", size = 100, weight = "bold", slant = "italic")
    
-def time(): 
+def time():
+
     string = strftime('%I:%M:%S %p') 
     lbl.config(text = string) 
     lbl.after(1000, time) 
