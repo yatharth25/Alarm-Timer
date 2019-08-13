@@ -33,12 +33,17 @@ def updateButton():
         countdown(time)
         
 top = tkinter.Tk()
+
 top.geometry("640x480")
 
 top.frame = Frame(top)
+
 top.frame.pack(fill = "both")
+
 label = Label(top, text= "Welcome!", font=("Times", 50), bg = "black", fg = "white")
+
 label.pack(side= "top", fill = "both", expand = 1)
+
 top.title_font = tkfont.Font(family = "Times", size = 100, weight = "bold", slant = "italic")
    
 def time():
@@ -48,31 +53,55 @@ def time():
     lbl.after(1000, time) 
   
 lbl = Label(top, font = ('Times', 52), bg = 'black', fg = 'white') 
+
 lbl.pack(anchor = 'center',fill ="both",expand = 1) 
+
 time() 
 
+
 hoursT=tkinter.Label(top, text="Hours:")
+
 hoursE=tkinter.Entry(top)
+
 minuteT=tkinter.Label(top, text="Minutes:")
+
 minuteE=tkinter.Entry(top)
+
 secondT=tkinter.Label(top, text="Seconds:")
+
 secondE=tkinter.Entry(top)
+
 hoursT.pack(ipadx=1,ipady=1)
+
 hoursE.pack(ipadx=1,ipady=2)
+
 minuteT.pack(ipadx=2,ipady=1)
+
 minuteE.pack(ipadx=2,ipady=2)
+
 secondT.pack(ipadx=3,ipady=1)
+
 secondE.pack(ipadx=3,ipady=2)
+
 label = tkinter.Label(top)
 
+
+
 string = strftime('%H:%M:%S')
+
 label.config(text=string)
+
 label.after(1000, time)
+
 label = Label(top, font = ('Times', 12, 'bold'), bg = 'light grey', fg = 'black')
+
 label.pack()
 
 
 button=tkinter.Button(top,text="Start Timer",command=updateButton)
+
 button.pack()
+
 top.title(" Alarm Timer ")
+
 top.mainloop()
